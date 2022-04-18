@@ -49,10 +49,10 @@ function makeChart(datapenduduk) {
 
 function buatdiagram(datapenduduk) {
     // datapenduduk is an array of objects where each object represents a player
-     var usia = datapenduduk.map(function(d) {
+     var pekerjaann = datapenduduk.map(function(d) {
       return d.Pekerjaan;
     });
-    var jumlah = datapenduduk.map(function(d) {
+    var totall = datapenduduk.map(function(d) {
       return d.total;
     });
     
@@ -60,11 +60,11 @@ function buatdiagram(datapenduduk) {
     var chart = new Chart(ctx, {
       type: 'bar',
       data: {
-        labels: usia,
+        labels: pekerjaann,
         datasets: [
           {
             label: 'Jumlah pekerja',
-            data: jumlah,
+            data: totall,
             backgroundColor:[
                 'rgba(212, 68, 106, 0.3)',
                 'rgba(255, 159, 64, 0.3)',
@@ -105,10 +105,10 @@ function buatdiagram(datapenduduk) {
   d3.csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vTQaYJ-aqkFYcPwosfcIHX6wQus6uf3LSs5UTsGpUiKUIn3an68dTXEgC0yD94wjyyIny9nwe8Y8dOm/pub?gid=744188034&single=true&output=csv').then(buatdiagram)
 
 function buatDiagram(datapenduduk) {
-     var usia = datapenduduk.map(function(d) {
+     var agama = datapenduduk.map(function(d) {
       return d.Agama;
     });
-    var jumlah = datapenduduk.map(function(d) {
+    var Totalpemukaagama = datapenduduk.map(function(d) {
       return d.Total;
     });
     
@@ -116,20 +116,20 @@ function buatDiagram(datapenduduk) {
     var chart = new Chart(ctx, {
       type: 'pie',
       data: {
-        labels: usia,
+        labels: agama,
         datasets: [
           {
             label:'Jumlah Penduduk',
-            data: jumlah,
+            data: Totalpemukaagama,
             backgroundColor:[
                 'rgba(212, 68, 106, 0.3)',
                 'rgba(255, 159, 64, 0.3)',
                 'rgba(255, 205, 86, 0.3)'
             ],
             borderColor:[
-                'rgb(212, 68, 106',
-                'rgb(255, 159, 64',
-                'rgb(255, 205, 86'
+                'rgb(212, 68, 106)',
+                'rgb(255, 159, 64)',
+                'rgb(255, 205, 86)'
             ],
             borderWidth: 2
           }
@@ -148,10 +148,10 @@ function buatDiagram(datapenduduk) {
 
 function BuatDiagram(datapenduduk) {
     // datapenduduk is an array of objects where each object represents a player
-     var usia = datapenduduk.map(function(d) {
+     var tahunn = datapenduduk.map(function(d) {
       return d.Tahun;
     });
-    var jumlah = datapenduduk.map(function(d) {
+    var jumlahtotal = datapenduduk.map(function(d) {
       return d.Jumlah;
     });
     
@@ -159,11 +159,11 @@ function BuatDiagram(datapenduduk) {
     var chart = new Chart(ctx, {
       type: 'bar',
       data: {
-        labels: usia,
+        labels: tahunn,
         datasets: [
           {
             label: 'Total Penduduk',
-            data: jumlah,
+            data: jumlahtotal,
             backgroundColor:[
                 'rgba(176, 123, 237, 0.3)',
                 'rgba(116, 242, 234, 0.3)',
@@ -192,7 +192,7 @@ function BuatDiagram(datapenduduk) {
 
   function makechart(datapenduduk) {
     // datapenduduk is an array of objects where each object represents a player
-     var usia = datapenduduk.map(function(d) {
+     var tingkatpendidikann = datapenduduk.map(function(d) {
       return d.TingkatPendidikan;
     });
     var jumlah = datapenduduk.map(function(d) {
@@ -203,7 +203,7 @@ function BuatDiagram(datapenduduk) {
     var chart = new Chart(ctx, {
       type: 'pie',
       data: {
-        labels: usia,
+        labels: tingkatpendidikann,
         datasets: [{
           label: 'Jumlah',
           data: jumlah,
